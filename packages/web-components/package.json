@@ -1,7 +1,7 @@
 {
   "name": "@fluentui/web-components",
   "description": "A library of Fluent Web Components",
-  "version": "3.0.0-beta.37",
+  "version": "3.0.0-beta.55",
   "author": {
     "name": "Microsoft",
     "url": "https://discord.gg/FcSNfg4"
@@ -85,6 +85,10 @@
     "./drawer-body.js": {
       "types": "./dist/dts/drawer-body/define.d.ts",
       "default": "./dist/esm/drawer-body/define.js"
+    },
+    "./field.js": {
+      "types": "./dist/dts/field/define.d.ts",
+      "default": "./dist/esm/field/define.js"
     },
     "./image.js": {
       "types": "./dist/dts/image/define.d.ts",
@@ -174,6 +178,10 @@
       "types": "./dist/dts/theme/index.d.ts",
       "default": "./dist/esm/theme/index.js"
     },
+    "./utilities.js": {
+      "types": "./dist/dts/utils/index.d.ts",
+      "default": "./dist/esm/utils/index.js"
+    },
     "./package.json": "./package.json"
   },
   "sideEffects": [
@@ -189,6 +197,9 @@
     "./dist/esm/dialog/define.js",
     "./dist/esm/dialog-body/define.js",
     "./dist/esm/divider/define.js",
+    "./dist/esm/drawer/define.js",
+    "./dist/esm/drawer-body/define.js",
+    "./dist/esm/field/define.js",
     "./dist/esm/image/define.js",
     "./dist/esm/label/define.js",
     "./dist/esm/link/define.js",
@@ -205,6 +216,7 @@
     "./dist/esm/switch/define.js",
     "./dist/esm/tab/define.js",
     "./dist/esm/tabs/define.js",
+    "./dist/esm/tablist/define.js",
     "./dist/esm/tab-panel/define.js",
     "./dist/esm/text/define.js",
     "./dist/esm/text-input/define.js",
@@ -226,9 +238,9 @@
     "format": "prettier -w src/**/*.{ts,html} --ignore-path ../../.prettierignore",
     "format:check": "yarn format -c",
     "code-style": "yarn format:check && yarn lint",
-    "start": "yarn start-storybook -p 6006 --docs --no-manager-cache",
-    "start-storybook": "node node_modules/@storybook/html/bin/index",
-    "build-storybook": "node node_modules/@storybook/html/bin/build -o ./dist/storybook --docs",
+    "start": "yarn start-storybook -p 6006 --docs",
+    "start-storybook": "storybook dev",
+    "build-storybook": "storybook build -o ./dist/storybook --docs",
     "e2e": "playwright test",
     "test:dev": "playwright test"
   },
@@ -236,7 +248,8 @@
     "@microsoft/fast-element": "2.0.0-beta.26",
     "@tensile-perf/web-components": "~0.2.0",
     "@types/web": "^0.0.142",
-    "@storybook/html": "6.5.15",
+    "@storybook/html": "7.6.20",
+    "@storybook/html-webpack5": "7.6.20",
     "chromedriver": "^125.0.0"
   },
   "dependencies": {
