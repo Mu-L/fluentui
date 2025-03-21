@@ -25,7 +25,7 @@
     "@fluentui/common-styles": "*",
     "@fluentui/eslint-plugin": "*",
     "@fluentui/react-monaco-editor": "*",
-    "write-file-webpack-plugin": "^4.1.0",
+    "write-file-webpack-plugin": "^4.5.1",
     "@fluentui/scripts-tasks": "*",
     "@fluentui/scripts-webpack": "*"
   },
